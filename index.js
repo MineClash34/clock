@@ -1,6 +1,3 @@
-
-
-
 function setup() {
   document.getElementById("body").style.background = "#000";
   document.getElementById("body").style.position = "absolute";
@@ -8,7 +5,7 @@ function setup() {
   document.getElementById("body").style.top = "20%";
   createCanvas(750, 750);
   angleMode(DEGREES);
-};
+}
 
 function draw() {
   translate(250, 300);
@@ -18,16 +15,16 @@ function draw() {
   stroke(255);
   noFill();
   stroke(255, 100, 150);
-  let end1 = map(second(), 0, 60, 0, 360);
-  arc(0, 0, 400, 400, 0, end1);
+  let Angle1 = map(second(), 0, 60, 0, 360);
+  arc(0, 0, 400, 400, 0, Angle1);
 
   stroke(100, 255, 150);
-  let end2 = map(minute(), 0, 60, 0, 360);
-  arc(0, 0, 370, 370, 0, end2);
+  let Angle2 = map(minute(), 0, 60, 0, 360);
+  arc(0, 0, 370, 370, 0, Angle2);
 
   stroke(150, 100, 255);
-  let end3 = map(hour(), 0, 24, 0, 360);
-  arc(0, 0, 340, 340, 0, end3);
+  let Angle3 = map(hour(), 0, 24, 0, 360);
+  arc(0, 0, 340, 340, 0, Angle3);
 
   push();
   rotate(end1);
@@ -76,4 +73,4 @@ function draw() {
   noStroke()
   textSize(50)
   text(second(), 30, -250)
-};
+}
